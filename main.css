@@ -1,0 +1,217 @@
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: system-ui;
+}
+body {
+    background-image: url(img/fon.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.nav-top {
+    width: 100%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+}
+
+.nav-top span {
+    padding: 15px;
+    font-size: 18px;
+}
+
+.nav-top span:hover {
+    cursor: pointer;
+    border-bottom: 1px solid #fff;
+    margin-bottom: -1px;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 60px);
+    overflow: hidden;
+}
+
+.hexagon {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    background-image: url(img/hexagon.svg);
+    background-size: contain;
+    background-position: center;
+    height: 270px;
+    background-repeat: no-repeat;
+    color: #111;
+    transition: 1s ease;
+}
+
+.location, .time {
+    display: none;
+}
+
+.buy {
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+.hexagon[data-order="0"] {
+    transform: translateY(85%);
+    order: 0;
+    position: relative;
+    width: 120px;
+}
+
+.sopernik-1, .sopernik-2 {
+    display: none;
+}
+
+.hexagon[data-order="1"] {
+    transform: translateY(50%);
+    order: 1;
+    width:170px;
+    position: relative;
+}
+
+.hexagon[data-order="2"] {
+    transform: translateY(0%);
+    order: 2;
+    width: 270px;
+    flex-direction: column;
+    gap:10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.hexagon[data-order="3"] {
+    transform: translateY(-50%);
+    order: 3;
+    width: 170px;
+    position: relative;
+}
+
+.hexagon[data-order="4"] {
+    transform: translateY(-85%);
+    order: 4;
+    width:120px;
+    position: relative;
+}
+
+.location, .time, .date {
+    width: 100%;
+    text-align: center;
+}
+
+.date {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    width: min-content;
+}
+
+.hexagon {
+    cursor: pointer;
+}
+
+.hexagon[data-order="2"]:hover .location, .hexagon[data-order="2"]:hover .time, .hexagon[data-order="2"]:hover .date{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.hexagon[data-order="2"] .date {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.hexagon[data-order="2"] .time, .hexagon[data-order="2"] .location  {
+    font-size: 20px;
+}
+
+
+.hexagon[data-order="2"]:hover .buy {
+    display: block;
+}
+
+.sopernik_1 {
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    width: 42%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: calc(50% - 75px);
+    clip-path: polygon(0% 100%, 3.5rem 0%, 100% 0%, 100% 100%, 0% 100%);
+    transition: margin-left 1s ease-out;
+    border-radius: 10% 0px 0px 5px;
+    transform: rotate(180deg);
+    margin-left: -100vw;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.sopernik_1 text {
+    transform: rotate(180deg);
+}
+
+.sopernik_2 {
+    position: absolute;
+    background-color: #fff;
+    right: 0;
+    width: 42%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: calc(50% + 35px);
+    clip-path: polygon(0% 100%, 3.5rem 0%, 100% 0%, 100% 100%, 0% 100%);
+    transition: margin-right 1s ease-out;
+    border-radius: 10% 0px 0px 5px;
+    margin-right: -100vw;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.vhod {
+    margin-right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.i-vhod {
+    width:18px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.i-menu {
+    width:18px;
+    height: auto;
+    margin-right: 50px;
+}
+
+.nav-vhod {
+    display: flex;
+}
+
+.bilets_and_abonements {
+    margin-left: 50px;
+}
